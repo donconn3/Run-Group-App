@@ -1,31 +1,19 @@
-package com.rungroup.web.modals;
+package com.rungroup.web.dto;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.grammars.hql.HqlParser;
 
 import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-@Entity
-@Table(name = "clubs")
-public class Club {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ClubDto {
     private Long id;
     private String title;
     private String photoUrl;
     private String content;
-    @CreationTimestamp
     private LocalDateTime createdOn;
-    @UpdateTimestamp
     private LocalDateTime updatedOn;
 }
