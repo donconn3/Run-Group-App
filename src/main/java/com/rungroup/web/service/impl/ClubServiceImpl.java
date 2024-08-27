@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 @Service
 public class ClubServiceImpl implements ClubService {
-    private ClubRepo clubRepo;
+    private final ClubRepo clubRepo;
     @Autowired
     ClubServiceImpl(ClubRepo clubRepo){
         this.clubRepo = clubRepo;
